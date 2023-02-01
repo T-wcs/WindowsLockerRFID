@@ -21,7 +21,7 @@ Use the Hass agent and a sensor retrieving data in Powershell, then add this lin
 Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\CardPresentLog.txt"
 ```
 
-Output :
+Output :  
 ![image](https://user-images.githubusercontent.com/70718793/215987779-be1f7c49-2ec3-48ea-bc3a-e49d622e2cbb.png)
 
 ### Improvement
