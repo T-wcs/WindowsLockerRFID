@@ -6,7 +6,7 @@ To create your executable usable on Windows, I recommend to use PyInstaller with
 
 Build executable : 
 ```
-pyinstaller -F -w /path/to/file/lockwin.py
+pyinstaller -F -w --hidden-import=modules.* /path/to/file/lockwin.py -p "C:\Users\%USERNAME\Path_to_repository
 ```
 
 ### ⚙️ Create a installer
