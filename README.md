@@ -8,7 +8,7 @@ To create your executable usable on Windows, I recommend to use PyInstaller with
 
 Build executable : 
 ```
-pyinstaller -F -w --hidden-import=modules.* /path/to/file/lockwin.py -p "C:\Users\%USERNAME\Path_to_repository"
+pyinstaller -F -w --hidden-import=modules.* /path/to/file/main.py -p "C:\Users\%USERNAME\Path_to_repository"
 ```
 
 ### ⚙️ Create a installer
@@ -52,11 +52,9 @@ $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\out
 
 
 Output :  
-![image](https://user-images.githubusercontent.com/70718793/215987779-be1f7c49-2ec3-48ea-bc3a-e49d622e2cbb.png)
+![image](https://user-images.githubusercontent.com/70718793/216600295-802695cd-eb30-4447-9cff-cccffa7204e1.png)
 
 - - -
 
 ### Improvement
-1. Create a table to manage the different readers (ACR122U / WCR330)
-2. Send data in JSON format in Home Assistant
-3. Factorize the code
+1. Create a table to manage the different readers (ACR122U / WCR330 etc)
