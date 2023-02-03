@@ -42,7 +42,10 @@ Structure of `output.json` :
 
 To create a sensor with the result data from `output.json` you need create a PowerShell sensor on Hass Agent.
 
-In the script or command section of the Hass agent PowerShell sensor, add the following lines depending on the data you want to obtain :
+![image](https://user-images.githubusercontent.com/70718793/216603072-37a763d3-cfc9-4389-a621-f0902fe2cbc9.png)
+
+In the script or command section of the Hass agent PowerShell sensor, add the following lines depending on the data you want to obtain :  
+
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.CardUID
 ```
