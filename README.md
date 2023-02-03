@@ -1,7 +1,17 @@
-# WindowsLockerRFID
+# 🖥🔐 WindowsLockerRFID
 A simple python script to lock your Windows session when an RFID card (of your choice) is removed from the reader connected to the computer.
 
 - - -
+
+### Requirements
+It is necessary to have the pyscard library installed : https://github.com/LudovicRousseau/pyscard
+and the paho-mqtt client library if you want to send your data via mQTT : https://github.com/eclipse/paho.mqtt.python
+
+You can simply run the following command to install the packages:
+
+```bash
+pip install -r requirements.txt
+```
 
 ### 🔩 Build .exe from .py
 To create your executable usable on Windows, I recommend to use PyInstaller with the -F argument to create a single file, as well as the -w option to avoid displaying a command prompt that will be permanent since we are in an infinite While loop.
