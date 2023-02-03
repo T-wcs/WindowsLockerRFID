@@ -89,9 +89,29 @@ The code is now able to send data via the MQTT protocol based on a configuration
   "password": "YOU_PASSWORD",
   "topic": "homeassistant/sensor/WinLockerRFID/config"
 }
-```  
+``` 
+In your Home Assistant `configuration.yaml` file it will also be necessary to add the following lines: 
 
-It will automatically send the data found in the `output.json` file to the topic found in the configuration file.
+```yaml
+mqtt:        
+  sensor:
+    - name: "Winlocker Status"
+      state_topic: "homeassistant/sensor/WinLockerRFID/config"
+      value_template: "{{ value_json.WinlockerDetails.Status }}"
+      json_attributes_topic: "homeassistant/sensor/WinLockerRFID/attributes"
+
+    - name: "Winlocker Card UID"
+      state_topic: "homeassistant/sensor/WinLockerRFID/config"
+      value_template: "{{ value_json.WinlockerDetails.CardUID }}"
+      json_attributes_topic: "homeassistant/sensor/WinLockerRFID/attributes"
+      
+    - name: "Winlocker Profile Card"
+      state_topic: "homeassistant/sensor/WinLockerRFID/config"
+      value_template: "{{ value_json.WinlockerDetails.CardProfile }}"
+      json_attributes_topic: "homeassistant/sensor/WinLockerRFID/attributes"     
+```
+
+Now you can search for the entity with the name given to the variable `name` in the `configuration.yaml` file
 
 - - -
 
