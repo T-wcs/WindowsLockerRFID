@@ -113,6 +113,10 @@ mqtt:
 
 Now you can search for the entity with the name given to the variable `name` in the `configuration.yaml` file
 
+Example with `Winlocker Status` into `Development Tools > State`
+
+![image](https://user-images.githubusercontent.com/70718793/216605130-d5cd55e4-58b1-4528-ab53-52451132c67e.png)
+
 - - -
 
 ### Improvement
