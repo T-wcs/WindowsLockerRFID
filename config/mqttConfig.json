@@ -1,0 +1,7 @@
+{
+  "hostname":"homeassistant.lan",
+  "Port": 1883,
+  "login": "YOU_LOGIN",
+  "password": "YOU_PASSWORD",
+  "topic": "homeassistant/sensor/WinLockerRFID/config"
+}
