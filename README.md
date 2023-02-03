@@ -55,15 +55,13 @@ Output :
 ### MQTT module
 Le code est maintenant capable d'envoyer les données via le protocol MQTT en se basant sur un fichier de configuration `mqttConfig.json` avec la structure suivante : 
 
-`json
-{
+`{
   "hostname":"homeassistant.lan",
   "Port": 1883,
   "login": "YOU_LOGIN",
   "password": "YOU_PASSWORD",
   "topic": "homeassistant/sensor/WinLockerRFID/config"
-}
-`
+}`
 
 
 - - -
