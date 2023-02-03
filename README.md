@@ -40,34 +40,34 @@ Structure of `output.json` :
 
 ### Parsing output data with Hass Agent on Windows.
 
-To create a sensor with the result data from output.json you need create a PowerShell sensor on Hass Agent.
+To create a sensor with the result data from `output.json` you need create a PowerShell sensor on Hass Agent.
 
-Use the Hass agent and a sensor retrieving UID card in Powershell, then add this line: 
+In the script or command section of the Hass agent PowerShell sensor, add the following lines depending on the data you want to obtain :
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.CardUID
 ```
 
-To retrieve the profile card in Powershell, then add this line: 
+To retrieve the profile card : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ProfileCard
 ```
 
-To retrieve the reader status in Powershell, then add this line: 
+To retrieve the reader status : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.Status
 ```
 
-To retrieve the Windows Version in Powershell, then add this line: 
+To retrieve the Windows Version : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.WindowsVersion
 ```
 
-To retrieve the HostName in Powershell, then add this line: 
+To retrieve the HostName : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.HostName
 ```
 
-To retrieve the Reader Name in Powershell, then add this line: 
+To retrieve the Reader Name : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ReaderName
 ```  
