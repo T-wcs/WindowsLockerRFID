@@ -77,6 +77,8 @@ $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\out
 ```  
 Output :  
 ![image](https://user-images.githubusercontent.com/70718793/216600295-802695cd-eb30-4447-9cff-cccffa7204e1.png)
+
+- - -
   
 ### MQTT module
 The code is now able to send data via the MQTT protocol based on a configuration file `mqttConfig.json` with the following structure:
@@ -116,6 +118,16 @@ Now you can search for the entity with the name given to the variable `name` in 
 Example with `Winlocker Status` into `Development Tools > State`
 
 ![image](https://user-images.githubusercontent.com/70718793/216605130-d5cd55e4-58b1-4528-ab53-52451132c67e.png)
+
+- - -
+
+## Reader tested
+
+ACR122U :
+![image](https://user-images.githubusercontent.com/70718793/216606983-4b173acc-3de6-4d36-b745-740682d86ed6.png)
+
+WCR 330 :
+![image](https://user-images.githubusercontent.com/70718793/216606870-abc95a26-724e-4f33-87b2-4bac23b708d1.png)
 
 - - -
 
