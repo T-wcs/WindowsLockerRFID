@@ -16,7 +16,7 @@ def init_rfid():
     global reader
     # Recherchez tous les lecteurs disponibles
     r = smartcard.System.readers()
-    # Sélectionnez le lecteur WCR330 => 1 pour la partie NFC/RFID / La partie CARTE A PUCE 0
+    # Sélectionnez le lecteur WCR330 => 1 pour la partie NFC/RFID / Pour la partie CARTE A PUCE 0 | ACR122U = 0
     reader = r[1]
     # Connectez-vous au lecteur
     connection = reader.createConnection()
