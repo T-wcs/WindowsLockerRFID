@@ -1,5 +1,5 @@
 # 🖥🔐 WindowsLockerRFID
-A simple python script to lock your Windows session when an RFID card (of your choice) is removed from the reader connected to the computer.
+This is a basic program that automatically locks the session if the NFC/RFID card is not present on the USB badge reader connected to the Windows computer.
 
 - - -
 
