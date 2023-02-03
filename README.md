@@ -3,7 +3,7 @@ A simple python script to lock your Windows session when an RFID card (of your c
 
 - - -
 
-### Requirements
+### ⚠️ Requirements
 It is necessary to have the pyscard library installed : https://github.com/LudovicRousseau/pyscard
 and the paho-mqtt client library if you want to send your data via mQTT : https://github.com/eclipse/paho.mqtt.python
 
@@ -48,7 +48,7 @@ Structure of `output.json` :
 
 - - -
 
-### Parsing output data with Hass Agent on Windows.
+### 📑 Parsing output data with Hass Agent on Windows.
 
 To create a sensor with the result data from `output.json` you need create a PowerShell sensor on Hass Agent.
 In the script or command section of the Hass agent PowerShell sensor, add the following lines depending on the data you want to obtain :  
@@ -90,7 +90,7 @@ Output :
 
 - - -
   
-### MQTT module
+### 📡 MQTT module
 The code is now able to send data via the MQTT protocol based on a configuration file `mqttConfig.json` with the following structure:
 
 ```json
@@ -131,12 +131,16 @@ Example with `Winlocker Status` into `Development Tools > State`
 
 - - -
 
-## Reader tested
+## ✅ Reader tested
 
-ACR122U :  
+ACR122U : 
+
 ![image](https://user-images.githubusercontent.com/70718793/216606983-4b173acc-3de6-4d36-b745-740682d86ed6.png)
 
+- - -
+
 WCR 330 :  
+
 ![image](https://user-images.githubusercontent.com/70718793/216606870-abc95a26-724e-4f33-87b2-4bac23b708d1.png)
 
 - - -
