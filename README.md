@@ -123,10 +123,10 @@ Example with `Winlocker Status` into `Development Tools > State`
 
 ## Reader tested
 
-ACR122U :
+ACR122U :  
 ![image](https://user-images.githubusercontent.com/70718793/216606983-4b173acc-3de6-4d36-b745-740682d86ed6.png)
 
-WCR 330 :
+WCR 330 :  
 ![image](https://user-images.githubusercontent.com/70718793/216606870-abc95a26-724e-4f33-87b2-4bac23b708d1.png)
 
 - - -
