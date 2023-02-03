@@ -58,32 +58,32 @@ In the script or command section of the Hass agent PowerShell sensor, add the fo
 
 To retrieve the Card UID
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.CardUID
+$json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.CardUID
 ```
 
 To retrieve the Card profile : 
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ProfileCard
+$json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ProfileCard
 ```
 
 To retrieve the Reader status : 
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.Status
+$json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.Status
 ```
 
 To retrieve the Windows Version : 
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.WindowsVersion
+$json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.WindowsVersion
 ```
 
 To retrieve the HostName : 
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.HostName
+$json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.HostName
 ```
 
 To retrieve the Reader Name : 
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ReaderName
+$json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ReaderName
 ```  
 Output :  
 ![image](https://user-images.githubusercontent.com/70718793/216600295-802695cd-eb30-4447-9cff-cccffa7204e1.png)
