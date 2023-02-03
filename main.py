@@ -7,9 +7,9 @@ from modules import computerLocker, folderCreate, jsonData, mqttConnect
 
 currentUser = os.environ["USERNAME"]
 folder_path = "C:\\Users\\{}\\AppData\\Local\\Programs\\WinLockerRFID".format(currentUser)
-CardGrantedConfig = "{}\CardGranted.json".format(folder_path)
-OutputJsonLog = "{}\output.json".format(folder_path)
-mqttConfigFile = "{}\mqttConfig.json".format(folder_path)
+OutputJsonLog = "{}\data\output.json".format(folder_path)
+mqttConfigFile = "{}\config\mqttConfig.json".format(folder_path)
+CardGrantedConfig = "{}\config\CardGranted.json".format(folder_path)
 
 def init_rfid():
     global card_uid
