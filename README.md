@@ -18,7 +18,29 @@ In our case it is useful to not allow the user to change the installation direct
 - - -
 
 ### 🏠 Home Assistant Integration
-You can also integrate the reader status, UID and profile of the read RFID card to send it to Home Assistant, it will be based on the output.json file located in the installation directory.
+You can also integrate the reader status, UID and profile of the read RFID card to send it to Home Assistant, it will be based on the `output.json` file located in the installation directory.
+
+Structure of `output.json` : 
+
+```json
+{
+    "WinlockerDetails": {
+        "Status": "Connected",
+        "ConnectionType": "USB",
+        "HostName": "DESKTOP-EXAMPLE",
+        "WindowsVersion": "Windows-10-10.0.19044-SP0",
+        "ReaderName": "WCR WCR330-ContactLess Reader 0",
+        "CardUID": "01020304",
+        "CardProfile": "JohnDoe"
+    }
+}
+```
+
+- - -
+
+### Parsing output data with Hass Agent on Windows.
+
+To create a sensor with the result data from output.json you need create a PowerShell sensor on Hass Agent.
 
 Use the Hass agent and a sensor retrieving UID card in Powershell, then add this line: 
 ```
