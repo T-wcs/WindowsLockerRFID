@@ -48,11 +48,23 @@ $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\out
 To retrieve the Reader Name in Powershell, then add this line: 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ReaderName
-```
-
-
+```  
 Output :  
 ![image](https://user-images.githubusercontent.com/70718793/216600295-802695cd-eb30-4447-9cff-cccffa7204e1.png)
+  
+### MQTT module
+Le code est maintenant capable d'envoyer les données via le protocol MQTT en se basant sur un fichier de configuration `mqttConfig.json` avec la structure suivante : 
+
+`json
+{
+  "hostname":"homeassistant.lan",
+  "Port": 1883,
+  "login": "YOU_LOGIN",
+  "password": "YOU_PASSWORD",
+  "topic": "homeassistant/sensor/WinLockerRFID/config"
+}
+`
+
 
 - - -
 
