@@ -3,7 +3,7 @@
 
 import os, time, json, smartcard
 from smartcard.System import readers
-from modules import computerLocker, folderCreate, jsonData, mqttConnect
+from modules import computerLocker, jsonData, mqttConnect
 
 currentUser = os.environ["USERNAME"]
 folder_path = "C:\\Users\\{}\\AppData\\Local\\Programs\\WinLockerRFID".format(currentUser)
@@ -25,8 +25,6 @@ def init_rfid():
     data, sw1, sw2 = connection.transmit([0xFF, 0xCA, 0x00, 0x00, 0x00])
     # Affichez l'UID de la carte
     card_uid = "".join([format(x, "02x") for x in data])
-
-folderCreate.create_folder()
 
 def parse_json(filename):
     with open(filename, 'r') as f:
