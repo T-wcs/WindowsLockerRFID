@@ -22,13 +22,34 @@ You can also integrate the reader status, UID and profile of the read RFID card 
 
 Use the Hass agent and a sensor retrieving UID card in Powershell, then add this line: 
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.Status.CardUID
+$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.CardUID
 ```
 
-Use the Hass agent and a sensor retrieving the profile card in Powershell, then add this line: 
+To retrieve the profile card in Powershell, then add this line: 
 ```
-$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.Status.ProfileCard
+$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ProfileCard
 ```
+
+To retrieve the reader status in Powershell, then add this line: 
+```
+$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.Status
+```
+
+To retrieve the Windows Version in Powershell, then add this line: 
+```
+$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.WindowsVersion
+```
+
+To retrieve the HostName in Powershell, then add this line: 
+```
+$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.HostName
+```
+
+To retrieve the Reader Name in Powershell, then add this line: 
+```
+$json = Get-Content "C:\Users\%USERNAME%\AppData\LocalPrograms\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ReaderName
+```
+
 
 Output :  
 ![image](https://user-images.githubusercontent.com/70718793/215987779-be1f7c49-2ec3-48ea-bc3a-e49d622e2cbb.png)
