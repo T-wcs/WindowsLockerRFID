@@ -53,7 +53,7 @@ Output :
 ![image](https://user-images.githubusercontent.com/70718793/216600295-802695cd-eb30-4447-9cff-cccffa7204e1.png)
   
 ### MQTT module
-Le code est maintenant capable d'envoyer les données via le protocol MQTT en se basant sur un fichier de configuration `mqttConfig.json` avec la structure suivante : 
+The code is now able to send data via the MQTT protocol based on a configuration file `mqttConfig.json` with the following structure:
 
 ```json
 {
@@ -64,6 +64,9 @@ Le code est maintenant capable d'envoyer les données via le protocol MQTT en se
   "topic": "homeassistant/sensor/WinLockerRFID/config"
 }
 ```  
+
+It will automatically send the data found in the `output.json` file to the topic found in the configuration file.
+
 - - -
 
 ### Improvement
