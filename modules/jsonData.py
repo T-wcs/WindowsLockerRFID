@@ -5,7 +5,7 @@ import json, os
 
 currentUser = os.environ["USERNAME"]
 folder_path = "C:\\Users\\{}\\AppData\\Local\\Programs\\WinLockerRFID".format(currentUser)
-OutputJsonLog = "{}\output.json".format(folder_path)
+OutputJsonLog = "{}\data\output.json".format(folder_path)
 
 def write_to_json_file(card_uid, card_profile):
     # Définir les données à écrire dans le fichier
