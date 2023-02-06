@@ -206,6 +206,12 @@ if ($process -eq $null) {
 ```
 This script will check if the process is in the list of active processes, if it is not then it starts it.
 
+On the Home Assistant Dashboard you can have this: 
+
+![image](https://user-images.githubusercontent.com/70718793/216919626-ff7e16e5-8344-4d91-8ac0-a4d7be4e101d.png)
+  
+If the number of processes is equal to 0 then it means that `lockwin.exe` is not active on the computer.
+
 - - -
 
 ## ✅ Reader tested
