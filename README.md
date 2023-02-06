@@ -196,11 +196,12 @@ Now to be able to start the process `lockwin.exe` from Home Assistant, we will h
 
 Here are the contents of the file: 
 ```powershell
+$processPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\lockwin.exe"
 $processName = "lockwin"
 $process = Get-Process -Name $processName -ErrorAction SilentlyContinue
 
 if ($process -eq $null) {
-    Start-Process $processName
+    Start-Process $processPath
 }
 ```
 This script will check if the process is in the list of active processes, if it is not then it starts it.
