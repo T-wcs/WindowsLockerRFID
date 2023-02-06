@@ -60,7 +60,6 @@ To retrieve the Card UID with a one command :
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.CardUID
 ```  
-
 With a PowerShell script : 
 ```powershell
 $jsonPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json"
@@ -68,32 +67,70 @@ $json = Get-Content $jsonPath | ConvertFrom-Json
 $cardUID = $json.WinlockerDetails.CardUID
 Write-Output $cardUID
 ```
+Then specify the path to the script in the installation directory, named `GetCardUID.ps1` into `script or command` section.
 - - -  
-To retrieve the Card profile : 
+To retrieve the Card profile with a one command : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ProfileCard
+```  
+With a PowerShell script : 
+```powershell
+$jsonPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json"
+$json = Get-Content $jsonPath | ConvertFrom-Json
+$profileCard = $json.WinlockerDetails.ProfileCard
+Write-Output $profileCard
 ```
-
-To retrieve the Reader status : 
+- - -  
+To retrieve the Reader status with a one command : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.Status
+```  
+With a PowerShell script : 
+```powershell
+$jsonPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json"
+$json = Get-Content $jsonPath | ConvertFrom-Json
+$Status = $json.WinlockerDetails.Status
+Write-Output $Status
 ```
-
-To retrieve the Windows Version : 
+- - -  
+To retrieve the Windows Version with a one command : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.WindowsVersion
 ```
-
-To retrieve the HostName : 
+With a PowerShell script : 
+```powershell
+$jsonPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json"
+$json = Get-Content $jsonPath | ConvertFrom-Json
+$WindowsVersion = $json.WinlockerDetails.WindowsVersion
+Write-Output $WindowsVersion
+```
+- - - 
+To retrieve the HostName with a one command : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.HostName
 ```
-
-To retrieve the Reader Name : 
+With a PowerShell script : 
+```powershell
+$jsonPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json"
+$json = Get-Content $jsonPath | ConvertFrom-Json
+$HostName = $json.WinlockerDetails.HostName
+Write-Output $HostName
+```  
+- - -  
+To retrieve the Reader Name with a one command : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ReaderName
 ```  
+With a PowerShell script : 
+```powershell
+$jsonPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json"
+$json = Get-Content $jsonPath | ConvertFrom-Json
+$ReaderName = $json.WinlockerDetails.ReaderName
+Write-Output $ReaderName
+``` 
+- - -
 Output :  
+
 ![image](https://user-images.githubusercontent.com/70718793/216600295-802695cd-eb30-4447-9cff-cccffa7204e1.png)
 
 - - -
