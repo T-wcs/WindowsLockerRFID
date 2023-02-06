@@ -181,7 +181,7 @@ You can also add a command with Hass Agent to control the `lockwin.exe` process 
 Create a command from the Hass Agent menu, choose `PowerShell` as the command type and add this line: 
 
 ```powershell
-Stop-Process -Name lockwin.exe
+Stop-Process -Name lockwin
 ```
 
 ![image](https://user-images.githubusercontent.com/70718793/216914345-3ae7bb6d-3f7e-4355-a970-761ec64381ea.png)
@@ -190,8 +190,20 @@ Click on Save and activate the command.
 
 You can now create a map on your dashboard with the entity 
 
-![image](https://user-images.githubusercontent.com/70718793/216915245-c4ed36ec-5bb4-4496-bad9-d5d16f2a60c8.png)
+![image](https://user-images.githubusercontent.com/70718793/216915245-c4ed36ec-5bb4-4496-bad9-d5d16f2a60c8.png)  
 
+Now to be able to start the process `lockwin.exe` from Home Assistant, we will have to create another command which is the execution of the script `RunProcess.ps1` located in the installation directory.
+
+Here are the contents of the file: 
+```powershell
+$processName = "lockwin"
+$process = Get-Process -Name $processName -ErrorAction SilentlyContinue
+
+if ($process -eq $null) {
+    Start-Process $processName
+}
+```
+This script will check if the process is in the list of active processes, if it is not then it starts it.
 
 - - -
 
