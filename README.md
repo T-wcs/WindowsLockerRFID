@@ -56,11 +56,19 @@ In the script or command section of the Hass agent PowerShell sensor, add the fo
 ![image](https://user-images.githubusercontent.com/70718793/216603072-37a763d3-cfc9-4389-a621-f0902fe2cbc9.png)
 
 
-To retrieve the Card UID
+To retrieve the Card UID with a one command : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.CardUID
-```
+```  
 
+With a PowerShell script : 
+```powershell
+$jsonPath = "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json"
+$json = Get-Content $jsonPath | ConvertFrom-Json
+$cardUID = $json.WinlockerDetails.CardUID
+Write-Output $cardUID
+```
+- - -  
 To retrieve the Card profile : 
 ```
 $json = Get-Content "C:\Users\%USERNAME%\AppData\Roaming\WinLockerRFID\output.json" | ConvertFrom-Json; $json.WinlockerDetails.ProfileCard
