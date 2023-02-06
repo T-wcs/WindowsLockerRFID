@@ -176,6 +176,25 @@ Example with `Winlocker Status` into `Development Tools > State`
 
 - - -
 
+You can also add a command with Hass Agent to control the `lockwin.exe` process which will allow you to stop or start the process and monitor whether it is active or not.  
+
+Create a command from the Hass Agent menu, choose `PowerShell` as the command type and add this line: 
+
+```powershell
+Stop-Process -Name lockwin.exe
+```
+
+![image](https://user-images.githubusercontent.com/70718793/216914345-3ae7bb6d-3f7e-4355-a970-761ec64381ea.png)
+
+Click on Save and activate the command.
+
+You can now create a map on your dashboard with the entity 
+
+![image](https://user-images.githubusercontent.com/70718793/216915245-c4ed36ec-5bb4-4496-bad9-d5d16f2a60c8.png)
+
+
+- - -
+
 ## ✅ Reader tested
 
 ACR122U : 
